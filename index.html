@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shantanu Sarkar - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            padding: 50px 20px;
+            background: #007BFF;
+            color: white;
+            animation: slideIn 1s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+        }
+
+        header img.profile-photo {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid white; /* Optional: Adds a border around the photo */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        .nav-boxes {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .nav-boxes a {
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 30px;
+            margin: 0 10px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
+
+        .nav-boxes a:hover {
+            background-color: #007BFF;
+            transform: scale(1.1);
+        }
+
+        .section {
+            padding: 50px 20px;
+            background: #222;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            text-align: left;
+        }
+
+        .section h2 {
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .section p,
+        .section ul {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            margin: 10px 0;
+        }
+
+        .section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        footer {
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        .animation-area {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .box-area li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 25px;
+            height: 25px;
+            background: rgba(0, 0, 0, 0.2);
+            animation: animate 20s linear infinite;
+        }
+
+        .box-area li:nth-child(1) {
+            left: 86%;
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 0, 255, 0.3);
+            animation-duration: 12s;
+            animation-delay: 0s;
+        }
+
+        .box-area li:nth-child(2) {
+            left: 12%;
+            width: 30px;
+            height: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            animation-duration: 18s;
+            animation-delay: 1.5s;
+        }
+
+        .box-area li:nth-child(3) {
+            left: 30%;
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 0, 255, 0.3);
+            animation-duration: 16s;
+            animation-delay: 2.5s;
+        }
+
+        .box-area li:nth-child(4) {
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            animation-duration: 10s;
+            animation-delay: 3.5s;
+        }
+
+        .box-area li:nth-child(5) {
+            left: 70%;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 255, 0.3);
+            animation-duration: 14s;
+            animation-delay: 4.5s;
+        }
+
+        .box-area li:nth-child(6) {
+            left: 20%;
+            width: 70px;
+            height: 70px;
+            background: rgba(0, 0, 0, 0.3);
+            animation-duration: 12s;
+            animation-delay: 5.5s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .contact ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact ul li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .contact ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .contact ul li img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+     
+        <h1>Shantanu Sarkar</h1>
+        <p>Aspiring Software Developer | BCA Student</p>
+        <div class="nav-boxes">
+            <a href="#about">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact Me</a>
+        </div>
+    </header>
+
+    <section id="about" class="section about">
+        <h2>About Me</h2>
+        <p>I am a dedicated BCA student with a passion for programming and software development. With proficiency in C, C++, and HTML, I am eager to apply my skills to real-world projects and continue growing as a developer.</p>
+    </section>
+
+    <section id="education" class="section education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Bachelor's of Computer Application (BCA)</strong> - Gandhi Engineering College, Bhubaneshwar, Odisha (Current)</li>
+            <li><strong>12th Grade (Science - PCM)</strong> - Completed in 2022-2023</li>
+            <li><strong>10th Grade</strong> - Completed in 2020-2021</li>
+        </ul>
+    </section>
+
+    <section id="skills" class="section skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>C Programming</li>
+            <li>C++ Programming</li>
+            <li>Web Development: HTML</li>
+            <li>Data Structure & Management (DSA)</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
+        <ul>
+            <li><a href="tel:+917004046585">+91 7004046585</a></li>
+            <li><a href="mailto:thalaforareason0003@gmail.com">thalaforareason0003@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/shantanu-sarkar-03aa51321" target="_blank">LinkedIn</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Shantanu Sarkar. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Adding creative animations -->
+    <div class="animation-area">
+        <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
